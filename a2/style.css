@@ -1,1 +1,69 @@
 /* Insert your styles here */
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #343d46;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #a7adba;
+  padding: 1px;
+  text-align: center;
+  opacity: 0.8;
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+}
+
+img{
+  display: left;
+}
+
+footer{
+  background-color: #a7adba;
+  padding: 1px;
+  opacity: 0.8;
+}
+
+.navbar {
+  background-color: #4f5b66;
+  overflow: auto;
+  width: 100%;
+}
+
+.navbar a{
+  float: left;
+  color: #c0c5ce;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 31.85%;
+}
+
+.navbar a:hover{
+  background-color: gray;
+}
+
+.navbar a.active{
+  background-color: white;
+}
+
+/*for mobile or smaller screens*/
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+  .about{
+
+  }
