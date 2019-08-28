@@ -29,13 +29,22 @@
     </nav>
 
     <main>
-      <section class = "about" name = "aboutus">
-        <div id = "aboutus">
-          <h2 class = "abouttext"> ABOUT US </h2>
-        </div>
+      <section name = "aboutus">
+          <h2 class = "firstHeading" id = "aboutus"> ABOUT US </h2>
+          <p class = "aboutus">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+             anim id est laborum.
+           </p>
       </section>
 
-      <section class = "prices">
+      <section name = "prices">
+        <h2 class = "sectionHeading" id = "prices"> PRICES </h2>
+
+        <p class = "sectionBody">  PRICES - TO BE DONE LATER </p>
 
         <div class = "tablehead">Seat Type</div>
         <div class = "tablehead">Seat Code</div>
@@ -74,9 +83,9 @@
 
       </section>
 
-      <section class = "nowshowing">
-
-        NOW SHOWING - TO BE DONE LATER
+      <section name = "nowshowing">
+        <h2 class = "sectionHeading" id = "nowshowing"> NOW SHOWING </h2>
+        <p class = "sectionBody">  NOW SHOWING - TO BE DONE LATER </p>
 
       </section>
     </main>

@@ -4,12 +4,17 @@ html {
   padding: 0;
   margin: 0;
   width: 100%;
+  height: 100%;
 }
 
 body {
   padding: 0;
   margin: 0;
   background: url("../../media/Background.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -18,7 +23,6 @@ header {
   color: white;
   padding: 1px;
   text-align: center;
-  opacity: 1;
   font-family: 'Cinzel', serif;
   font-size: 50px;
 }
@@ -29,8 +33,9 @@ img{
 
 footer{
   background-color: #a7adba;
-  padding: 1px;
-  opacity: 0.8;
+  padding: 5px;
+  opacity: 0.9;
+  margin-top: 10px;
 }
 
 .navbar {
@@ -56,6 +61,49 @@ footer{
 
 .navbar a.active{
   background-color: white;
+}
+
+.firstHeading{
+  font-size: 30px;
+  background-color: black;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 0;
+  margin-top: 350px;
+}
+
+.sectionBody{
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+.aboutus{
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sectionHeading{
+  font-size: 30px;
+  background-color: black;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 0;
+  margin-top: 10px;
 }
 
 
