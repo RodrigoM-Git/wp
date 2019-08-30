@@ -106,7 +106,29 @@ footer{
   margin-top: 10px;
 }
 
+.pricesTable{
+  display: table;
+  margin: 0 auto;
+  background-color: gray;
+  opacity: 0.9;
+}
 
+.tableRow{
+  display: table-row;
+}
+
+.tableCell{
+  border: 1px solid black;
+  display: table-cell;
+  padding: 3px 10px;
+}
+
+.pricesBackground{
+  background-color: black;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  opacity: 0.9;
+}
 
 
 /*for mobile or smaller screens*/

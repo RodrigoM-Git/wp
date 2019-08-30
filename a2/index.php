@@ -41,46 +41,57 @@
            </p>
       </section>
 
-      <section name = "prices">
+      <section name = "prices" >
         <h2 class = "sectionHeading" id = "prices"> PRICES </h2>
 
-        <p class = "sectionBody">  PRICES - TO BE DONE LATER </p>
-
-        <div class = "tablehead">Seat Type</div>
-        <div class = "tablehead">Seat Code</div>
-        <div class = "tablehead">All day Monday and Wednesday AND 12pm on Wednesday</div>
-        <div class = "tablehead">All other times</div>
-
-        <div class = "tablecell">Standard Adult</div>
-        <div class = "tablecell">STA</div>
-        <div class = "tablecell">$14.00</div>
-        <div class = "tablecell">$19.80</div>
-
-        <div class = "tablecell">Standard Concession</div>
-        <div class = "tablecell">STP</div>
-        <div class = "tablecell">$12.50</div>
-        <div class = "tablecell">$17.50</div>
-
-        <div class = "tablecell">Standard Child</div>
-        <div class = "tablecell">STC</div>
-        <div class = "tablecell">$11.00</div>
-        <div class = "tablecell">$15.30</div>
-
-        <div class = "tablecell">First Class Adult</div>
-        <div class = "tablecell">FCA</div>
-        <div class = "tablecell">$24.00</div>
-        <div class = "tablecell">$30.00</div>
-
-        <div class = "tablecell">First Class Concession</div>
-        <div class = "tablecell">FCP</div>
-        <div class = "tablecell">$22.50</div>
-        <div class = "tablecell">$27.00</div>
-
-        <div class = "tablecell">First Class Child</div>
-        <div class = "tablecell">FCC</div>
-        <div class = "tablecell">$21.00</div>
-        <div class = "tablecell">$24.00</div>
-
+        <div class = pricesBackground>
+          <div class="pricesTable">
+            <div class="tableBody">
+              <div class="tableRow">
+                <div class="tableCell">Seat Type</div>
+                <div class="tableCell">Seat Code</div>
+                <div class="tableCell">All day Monday and Wednesday AND 12pm on Wednesday</div>
+                <div class="tableCell">All other time</div>
+              </div>
+              <div class="tableRow">
+                <div class="tableCell">Standard Adult</div>
+                <div class="tableCell">STA</div>
+                <div class="tableCell">$14.00</div>
+                <div class="tableCell">$19.80</div>
+              </div>
+              <div class="tableRow">
+                <div class="tableCell">Standard Concession</div>
+                <div class="tableCell">STP</div>
+                <div class="tableCell">$12.50</div>
+                <div class="tableCell">$17.50</div>
+              </div>
+              <div class="tableRow">
+                <div class="tableCell">Standard Child</div>
+                <div class="tableCell">STC</div>
+                <div class="tableCell">$11.00</div>
+                <div class="tableCell">$15.30</div>
+              </div>
+              <div class="tableRow">
+                <div class="tableCell">First Class Adult</div>
+                <div class="tableCell">FCA</div>
+                <div class="tableCell">$24.00</div>
+                <div class="tableCell">$30.00</div>
+              </div>
+              <div class="tableRow">
+                <div class="tableCell">First Class Concession</div>
+                <div class="tableCell">FCP</div>
+                <div class="tableCell">$22.50</div>
+                <div class="tableCell">$27.00</div>
+              </div>
+              <div class="tableRow">
+                <div class="tableCell">First Class Child</div>
+                <div class="tableCell">FCC</div>
+                <div class="tableCell">$21.00</div>
+                <div class="tableCell">$24.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section name = "nowshowing">
