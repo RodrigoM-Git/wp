@@ -9,14 +9,18 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background: url("../../media/Background.jpg");
+  background: url("../../media/A2/Background.jpg");
   height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
+main{
+  font-family: 'Montserrat', sans-serif;
+}
 .sticky{
   position: sticky;
   position: -webkit-sticky;
@@ -29,7 +33,7 @@ header {
   color: white;
   padding: 1px;
   text-align: center;
-  font-family: 'Cinzel', serif;
+  font-family: 'Volkhov', serif;
   font-size: 60px;
   opacity: 0.9;
 }
@@ -39,8 +43,12 @@ footer{
   padding: 5px;
   opacity: 0.9;
   margin-top: 10px;
+  font-size: 10px;
 }
 
+nav{
+  font-family: 'Source Code Pro', monospace;
+}
 .navbar {
   background-color: black;
   overflow: auto;
@@ -85,6 +93,21 @@ footer{
   margin-top: 0;
   margin-bottom: 0;
   opacity: 0.9;
+  padding: 50px;
+}
+
+.seat1{
+  width: 300px;
+  height: auto;
+  border: 5px solid gray;
+  margin-right: 100px;
+}
+
+.seat2{
+  width: 300px;
+  height: auto;
+  border: 5px solid gray;
+  margin-left: 100px;
 }
 
 .sectionHeading{
@@ -185,8 +208,8 @@ footer{
 }
 
 .trailer iframe{
-  width: 400px;
-  height: 200px;
+  width: 450px;
+  height: 250px;
 }
 
 .synopsisText{
@@ -228,6 +251,15 @@ footer{
 
 .booking button:active{
   background-color: black;
+}
+
+.bookingArea{
+  text-align: center;
+  background-color: black;
+  opacity: 0.9;
+  color: white;
+  padding: 10px;
+  border-top: 1px solid white;
 }
 
 /*for mobile or smaller screens*/

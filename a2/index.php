@@ -31,13 +31,24 @@
       <section name = "aboutus">
           <h2 class = "firstHeading" id = "aboutus"> ABOUT US </h2>
           <p class = "aboutus">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-             anim id est laborum.
-           </p>
+            Lunardo is a local cinema located in Town Street. We strive to bring a great viewing experience for all our
+            loyal, local customers, and those who are stopping by the town. We provide the newest movies for your
+            pleasure. <br> <br>
+
+            Recently, Lunardo has undergone major improvements and renovations in order to enhance the customer's experience
+            at our cinema. There are new seats in every cinema, and excitingly - recliner chairs in first class! The projection
+            and sound systems have also been upgraded with 3D Dolby Vision Projection, and Dolby Atmos sound -
+            overall creating a more immersive movie experience. <br> <br>
+
+            For your convenience, we would love to show you what the new seats look like below:<br>
+
+            (Left - Standard &emsp;&emsp;&emsp;&emsp;||&emsp;&emsp;&emsp;&emsp; Right - First Class) <br> <br>
+
+
+            <img src = "../../media/A2/RegularSeats.jpg" alt = regSeats class = seat1>
+            <img src = "../../media/A2/FirstClassSeats.png" alt = firstClassSeats class = seat2>
+
+          </p>
       </section>
 
       <section name = "prices" >
@@ -99,7 +110,7 @@
         <div class = nowShowing1>
           <div class = movieBox>
             <div>
-            <img src = "../../media/Endgame.jpg" alt = Endgame>
+            <img src = "../../media/A2/Endgame.jpg" alt = Endgame>
             </div>
             <div class = movieText>
               <p class = movieTitle> ENDGAME - M </p>
@@ -117,7 +128,7 @@
 
           <div class = movieBox>
             <div>
-            <img src = "../../media/TopEndWedding.jpg" alt = Endgame>
+            <img src = "../../media/A2/TopEndWedding.jpg" alt = Endgame>
             </div>
             <div class = movieText>
               <p class = movieTitle> TOP END WEDDING - M </p>
@@ -137,7 +148,7 @@
         <div class = nowShowing2>
           <div class = movieBox>
             <div>
-            <img src = "../../media/Dumbo.jpg" alt = Endgame>
+            <img src = "../../media/A2/Dumbo.jpg" alt = Endgame>
             </div>
             <div class = movieText>
               <p class = movieTitle> DUMBO - PG </p>
@@ -155,7 +166,7 @@
 
           <div class = movieBox>
             <div>
-            <img src = "../../media/TheHappyPrince.jpg" alt = Endgame>
+            <img src = "../../media/A2/TheHappyPrince.jpg" alt = Endgame>
             </div>
             <div class = movieText>
               <p class = movieTitle> THE HAPPY PRINCE - MA15+ </p>
@@ -176,12 +187,10 @@
           <div class = synopsisText>
             <div class = synopsisTitle> ENDGAME --- M </div>
             <div class = plotDescription>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+            Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply
+            starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America and Bruce Banner
+            -- must figure out a way to bring back their vanquished allies for an epic showdown with Thanos -- the evil
+            demigod who decimated the planet and the universe.
             </div>
 
             <div class = booking>
@@ -197,10 +206,13 @@
           </div>
 
            <div class = trailer>
-             <iframe src="https://www.youtube.com/watch?v=TcMBFSGVi1c"></iframe>
+             <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
            </div>
+         </div>
 
-
+           <div class = bookingArea>
+             <h3> BOOKING AREA - TO BE ADDED </h3>
+           </div>
 
       </section>
     </main>
