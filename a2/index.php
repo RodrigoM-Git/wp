@@ -16,11 +16,10 @@
     <header>
       <div>
         <h1>  LUNARDO </h1>
-
       </div>
     </header>
 
-    <nav>
+    <nav class = sticky>
       <div class = "navbar">
         <a href = "#aboutus">About Us</a>
         <a href = "#prices">Prices</a>
@@ -96,7 +95,112 @@
 
       <section name = "nowshowing">
         <h2 class = "sectionHeading" id = "nowshowing"> NOW SHOWING </h2>
-        <p class = "sectionBody">  NOW SHOWING - TO BE DONE LATER </p>
+
+        <div class = nowShowing1>
+          <div class = movieBox>
+            <div>
+            <img src = "../../media/Endgame.jpg" alt = Endgame>
+            </div>
+            <div class = movieText>
+              <p class = movieTitle> ENDGAME - M </p>
+              <p class = movieTimes>
+                Mon - N/A<br>
+                Tue - N/A<br>
+                Wed - 09PM<br>
+                Thu - 09PM<br>
+                Fri - 09PM<br>
+                Sat - 06PM<br>
+                Sun - 06PM<br>
+              </p>
+            </div>
+          </div>
+
+          <div class = movieBox>
+            <div>
+            <img src = "../../media/TopEndWedding.jpg" alt = Endgame>
+            </div>
+            <div class = movieText>
+              <p class = movieTitle> TOP END WEDDING - M </p>
+              <p class = movieTimes>
+                Mon - 06PM<br>
+                Tue - 06PM<br>
+                Wed - N/A<br>
+                Thu - N/A<br>
+                Fri - N/A<br>
+                Sat - 03PM<br>
+                Sun - 03PM<br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class = nowShowing2>
+          <div class = movieBox>
+            <div>
+            <img src = "../../media/Dumbo.jpg" alt = Endgame>
+            </div>
+            <div class = movieText>
+              <p class = movieTitle> DUMBO - PG </p>
+              <p class = movieTimes>
+                Mon - 12PM<br>
+                Tue - 12PM<br>
+                Wed - 06PM<br>
+                Thu - 06PM<br>
+                Fri - 06PM<br>
+                Sat - 12PM<br>
+                Sun - 12PM<br>
+              </p>
+            </div>
+          </div>
+
+          <div class = movieBox>
+            <div>
+            <img src = "../../media/TheHappyPrince.jpg" alt = Endgame>
+            </div>
+            <div class = movieText>
+              <p class = movieTitle> THE HAPPY PRINCE - MA15+ </p>
+              <p class = movieTimes>
+                Mon - N/A<br>
+                Tue - N/A<br>
+                Wed - 12PM<br>
+                Thu - 12PM<br>
+                Fri - 12PM<br>
+                Sat - 09PM<br>
+                Sun - 09PM<br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class = synopsis>
+          <div class = synopsisText>
+            <div class = synopsisTitle> ENDGAME --- M </div>
+            <div class = plotDescription>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </div>
+
+            <div class = booking>
+              MAKE A BOOKING: <br>
+              <button>MON - N/A</button>
+              <button>TUE - N/A</button>
+              <button>WED - 9PM</button>
+              <button>THU - 9PM</button>
+              <button>FRI - 9PM</button>
+              <button>SAT - 6PM</button>
+              <button>SUN - 6PM</button>
+            </div>
+          </div>
+
+           <div class = trailer>
+             <iframe src="https://www.youtube.com/watch?v=TcMBFSGVi1c"></iframe>
+           </div>
+
+
 
       </section>
     </main>

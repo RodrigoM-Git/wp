@@ -4,7 +4,6 @@ html {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100%;
 }
 
 body {
@@ -18,17 +17,21 @@ body {
   background-size: cover;
 }
 
+.sticky{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10;
+}
+
 header {
   background-color: black;
   color: white;
   padding: 1px;
   text-align: center;
   font-family: 'Cinzel', serif;
-  font-size: 50px;
-}
-
-img{
-  display: left;
+  font-size: 60px;
+  opacity: 0.9;
 }
 
 footer{
@@ -42,7 +45,6 @@ footer{
   background-color: black;
   overflow: auto;
   width: 100%;
-  opacity: 0.8;
 }
 
 .navbar a{
@@ -64,26 +66,15 @@ footer{
 }
 
 .firstHeading{
-  font-size: 30px;
+  font-size: 40px;
   background-color: black;
   text-align: center;
   padding: 30px;
   color: white;
-  opacity: 0.9;
   margin-bottom: 0;
   margin-top: 350px;
 }
 
-.sectionBody{
-  font-size: 20px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0;
-
-}
 
 .aboutus{
   font-size: 20px;
@@ -93,15 +84,15 @@ footer{
   display: block;
   margin-top: 0;
   margin-bottom: 0;
+  opacity: 0.9;
 }
 
 .sectionHeading{
-  font-size: 30px;
+  font-size: 40px;
   background-color: black;
   text-align: center;
   padding: 30px;
   color: white;
-  opacity: 0.9;
   margin-bottom: 0;
   margin-top: 10px;
 }
@@ -111,6 +102,7 @@ footer{
   margin: 0 auto;
   background-color: gray;
   opacity: 0.9;
+  font-size: 20px;
 }
 
 .tableRow{
@@ -130,6 +122,113 @@ footer{
   opacity: 0.9;
 }
 
+.movieBox{
+  background-color: black;
+  height: 250px;
+  width: 350px;
+  margin: 0 auto;
+  border: 1px solid white;
+  overflow: auto;
+  display: inline-block;
+
+}
+
+.movieBox div img{
+  width: auto;
+  height: 200px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid white;
+}
+
+.movieText{
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.movieTitle{
+  font-size: 20px;
+}
+
+.movieTimes{
+  font-size: 12px;
+}
+
+.nowShowing1{
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.nowShowing2{
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.synopsis{
+  background-color: black;
+  opacity: 0.9;
+  margin: 0 auto;
+  overflow: auto;
+  color: white;
+  border-top: 1px solid white;
+}
+
+.trailer{
+  float: right;
+  padding: 40px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.trailer iframe{
+  width: 400px;
+  height: 200px;
+}
+
+.synopsisText{
+  float: left;
+  width: 55%;
+  padding: 30px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.synopsisTitle{
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.plotDescription{
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.bookingText{
+  float: left;
+  font-size: 20px;
+}
+
+.booking button{
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.booking button:hover{
+  background-color: gray;
+}
+
+.booking button:active{
+  background-color: black;
+}
 
 /*for mobile or smaller screens*/
 @media screen and (max-width: 500px) {
