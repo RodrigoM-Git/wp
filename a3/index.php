@@ -22,14 +22,14 @@
 
     <nav class = sticky>
       <div class = "navbar">
-        <a href = "#aboutus" id = "aboutUsNav" onclick = "navActive(1)">About Us</a>
-        <a href = "#prices" id = "pricesNav" onclick = "navActive(2)">Prices</a>
-        <a href = "#nowshowing" id = "nowShowingNav" onclick = "navActive(3)">Now Showing</a>
+        <a href = "#aboutus" id = "aboutUsNav">About Us</a>
+        <a href = "#prices" id = "pricesNav">Prices</a>
+        <a href = "#nowshowing" id = "nowShowingNav">Now Showing</a>
       </div>
     </nav>
 
     <main>
-      <section name = "aboutus">
+      <section name = "aboutus" id = "aboutUs">
           <h2 class = "firstHeading" id = "aboutus"> ABOUT US </h2>
           <p class = "aboutus">
             Lunardo is a local cinema located in Town Street. We strive to bring a great viewing experience for all our
@@ -52,7 +52,7 @@
           </p>
       </section>
 
-      <section name = "prices" >
+      <section name = "prices" id = "prices">
         <h2 class = "sectionHeading" id = "prices"> PRICES </h2>
 
         <div class = pricesBackground>
@@ -105,7 +105,7 @@
         </div>
       </section>
 
-      <section name = "nowshowing">
+      <section name = "nowshowing" id = "nowShowing">
         <h2 class = "sectionHeading" id = "nowshowing"> NOW SHOWING </h2>
 
         <div class = nowShowing1>
@@ -218,7 +218,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer id = "footer">
       <div>
         Lunardo Cinemas. Contact us at...<br>
         Email: customerhelp@lunardocinemas.org<br>
