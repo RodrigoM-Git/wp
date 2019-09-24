@@ -21,6 +21,7 @@ body {
 main{
   font-family: 'Montserrat', sans-serif;
 }
+
 .sticky{
   position: sticky;
   position: -webkit-sticky;
@@ -49,6 +50,7 @@ footer{
 nav{
   font-family: 'Source Code Pro', monospace;
 }
+
 .navbar {
   background-color: black;
   overflow: auto;
@@ -57,7 +59,7 @@ nav{
 
 .navbar a{
   float: left;
-  color: #c0c5ce;
+  color: white;
   text-align: center;
   padding: 10px;
   text-decoration: none;
@@ -120,9 +122,10 @@ nav{
 .pricesTable{
   display: table;
   margin: 0 auto;
-  background-color: gray;
+  background-color: black;
   opacity: 0.9;
   font-size: 20px;
+  color: white;
 }
 
 .tableRow{
@@ -130,7 +133,7 @@ nav{
 }
 
 .tableCell{
-  border: 1px solid black;
+  border: 1px solid white;
   display: table-cell;
   padding: 3px 10px;
 }
