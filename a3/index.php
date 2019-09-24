@@ -109,7 +109,7 @@
         <h2 class = "sectionHeading" id = "nowshowing"> NOW SHOWING </h2>
 
         <div class = nowShowing1>
-          <div class = movieBox>
+          <div class = movieBox onclick = "endgameSynopsis()">
             <div>
             <img src = "../../media/A2/Endgame.jpg" alt = Endgame>
             </div>
@@ -127,7 +127,7 @@
             </div>
           </div>
 
-          <div class = movieBox>
+          <div class = movieBox onclick = "topEndWeddingSynopsis()">
             <div>
             <img src = "../../media/A2/TopEndWedding.jpg" alt = Endgame>
             </div>
@@ -147,7 +147,7 @@
         </div>
 
         <div class = nowShowing2>
-          <div class = movieBox>
+          <div class = movieBox onclick = "dumboSynopsis()">
             <div>
             <img src = "../../media/A2/Dumbo.jpg" alt = Endgame>
             </div>
@@ -165,7 +165,7 @@
             </div>
           </div>
 
-          <div class = movieBox>
+          <div class = movieBox onclick = "theHappyPrinceSynopsis()">
             <div>
             <img src = "../../media/A2/TheHappyPrince.jpg" alt = Endgame>
             </div>
@@ -186,28 +186,28 @@
 
         <div class = synopsis>
           <div class = synopsisText>
-            <div class = synopsisTitle> ENDGAME --- M </div>
-            <div class = plotDescription>
+            <div class = synopsisTitle id = "synopsisTitle"> ENDGAME --- M </div>
+            <div class = plotDescription id = "synopsisPlot">
             Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply
             starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America and Bruce Banner
             -- must figure out a way to bring back their vanquished allies for an epic showdown with Thanos -- the evil
-            demigod who decimated the planet and the universe.
+            demigod who decimated the planet and the universe. 
             </div>
 
             <div class = booking>
               MAKE A BOOKING: <br>
-              <button>MON - N/A</button>
-              <button>TUE - N/A</button>
-              <button>WED - 9PM</button>
-              <button>THU - 9PM</button>
-              <button>FRI - 9PM</button>
-              <button>SAT - 6PM</button>
-              <button>SUN - 6PM</button>
+              <button id="butMon">MON - N/A</button>
+              <button id="butTue">TUE - N/A</button>
+              <button id="butWed">WED - 9PM</button>
+              <button id="butThu">THU - 9PM</button>
+              <button id="butFri">FRI - 9PM</button>
+              <button id="butSat">SAT - 6PM</button>
+              <button id="butSun">SUN - 6PM</button>
             </div>
           </div>
 
            <div class = trailer>
-             <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id = "endgameTrailer"></iframe>
            </div>
          </div>
 
