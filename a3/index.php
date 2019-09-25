@@ -61,8 +61,8 @@
               <div class="tableRow">
                 <div class="tableCell">Seat Type</div>
                 <div class="tableCell">Seat Code</div>
-                <div class="tableCell">All day Monday and Wednesday AND 12pm on Wednesday</div>
-                <div class="tableCell">All other time</div>
+                <div class="tableCell">All day Monday and Wednesday AND 12pm on Weekdays</div>
+                <div class="tableCell">All other times</div>
               </div>
               <div class="tableRow">
                 <div class="tableCell">Standard Adult</div>
@@ -108,8 +108,9 @@
       <section name = "nowshowing" id = "nowShowing">
         <h2 class = "sectionHeading" id = "nowshowing"> NOW SHOWING </h2>
 
+          <!--MovieID = ACT-->
         <div class = nowShowing1>
-          <div class = movieBox onclick = "endgameSynopsis()">
+          <div class = movieBox onclick = "synopsisACT()">
             <div>
             <img src = "../../media/A2/Endgame.jpg" alt = Endgame>
             </div>
@@ -126,8 +127,9 @@
               </p>
             </div>
           </div>
-
-          <div class = movieBox onclick = "topEndWeddingSynopsis()">
+            
+            <!--MovieID = RMC-->
+          <div class = movieBox onclick = "synopsisRMC()">
             <div>
             <img src = "../../media/A2/TopEndWedding.jpg" alt = Endgame>
             </div>
@@ -145,9 +147,10 @@
             </div>
           </div>
         </div>
-
+          
+          <!--MovieID = ANM-->
         <div class = nowShowing2>
-          <div class = movieBox onclick = "dumboSynopsis()">
+          <div class = movieBox onclick = "synopsisANM()">
             <div>
             <img src = "../../media/A2/Dumbo.jpg" alt = Endgame>
             </div>
@@ -164,8 +167,9 @@
               </p>
             </div>
           </div>
-
-          <div class = movieBox onclick = "theHappyPrinceSynopsis()">
+            
+            <!--MovieID = AHF-->
+          <div class = movieBox onclick = "synopsisAHF()">
             <div>
             <img src = "../../media/A2/TheHappyPrince.jpg" alt = Endgame>
             </div>
@@ -207,12 +211,118 @@
           </div>
 
            <div class = trailer>
-             <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id = "endgameTrailer"></iframe>
+             <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id = "movieTrailer"></iframe>
            </div>
          </div>
 
            <div class = bookingArea>
-             <h3> BOOKING AREA - TO BE ADDED </h3>
+             <form action = "https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method = "post" target = "_blank">
+                <div class = movieInfoForm>
+                    <input type = "hidden" name = "movie[id]" id = "movie-id">
+                    <input type = "hidden" name = "movie[day]" id = "movie-day">
+                    <input type = "hidden" name = "movie[hour]" id = "movie-hour">
+                </div>
+    
+                <div class = "standardSeatsForm">
+                    <h2>Standard</h2>
+                    <label> Adult </label><select name = "seats[STA]">
+                        <option value = "">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select>
+                    <label> Concession </label><select name = "seats[STP]">
+                        <option value = "">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select>
+                    <label> Children </label><select name = "seats[STC]">
+                        <option value = "">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select>
+                </div>
+                 
+                <div class = "firstClassSeatsForm">
+                    <h2>First Class</h2>
+                    <label> Adult </label><select name = "seats[FCA]">
+                        <option value = "">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select>
+                    <label> Concession </label><select name = "seats[FCP]">
+                        <option value = "">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select>
+                    <label> Children </label><select name = "seats[FCC]">
+                        <option value = "">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select>
+                </div>
+                 
+                 <div class = "totalPrice">
+                     <label> Total $ </label><input type = "text" name = "total" readonly>
+                 </div>
+                 
+                <div class = "customerInfo">
+                    <label> Name </label><input type = "text" name = "cust[name]">
+                    <label> Email </label><input type = "email" name = "cust[email]">
+                    <label> Mobile </label><input type = "tel" name = "cust[mobile]">
+                    <label> Credit Card </label><input type = "text" name = "cust[card]">
+                    <label> Expiry </label><input type = "month" name = "cust[expiry]">
+                    <input type = "submit" name = "order">
+                </div>
+                 
+             </form>
            </div>
 
       </section>

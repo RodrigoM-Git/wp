@@ -15,7 +15,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 main{
@@ -210,6 +209,7 @@ nav{
 .trailer iframe{
   width: 450px;
   height: 250px;
+  border: 1px solid white;
 }
 
 .synopsisText{
@@ -261,6 +261,8 @@ nav{
   padding: 10px;
   border-top: 1px solid white;
 }
+
+
 
 /*for mobile or smaller screens*/
 @media screen and (max-width: 500px) {
