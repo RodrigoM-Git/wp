@@ -321,11 +321,11 @@
                  </div>
                  
                 <div class = "customerInfo">
-                    <label> Name </label><input type = "text" name = "cust[name]" class = "cust-name" id = cust-name required pattern = "^[A-za-z- '.]+$"><br>
+                    <label> Name </label><input type = "text" name = "cust[name]" class = "cust-name" id = cust-name required pattern = "^[A-Za-z- '.]+$"><br>
                     <label> Email </label><input type = "email" name = "cust[email]" class = "cust-email" id = cust-email required><br>
                     <label> Mobile </label><input type = "tel" name = "cust[mobile]" class = "cust-mobile" id = cust-mobile required pattern = "^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$"><br>
                     <label> Credit Card </label><input type = "text" name = "cust[card]" class = "cust-card" id = cust-card required pattern = "^[0-9]{14,19}$"><br>
-                    <label> Expiry </label><input type = "month" name = "cust[expiry]" class = "cust-expiry"id = cust-expiry required ><br>
+                    <label> Expiry </label><input type = "month" name = "cust[expiry]" class = "cust-expiry" id = cust-expiry required ><br>
                     <input type = "submit" name = "order" class = "order" id = order>
                 </div>
              </form>

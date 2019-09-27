@@ -278,6 +278,15 @@ var totalPriceFCP = 0.00;
 var totalPriceFCC = 0.00;
 var totalPrice = 0.00;
 
+var prices = {
+    STA: { reg:19.80, dis:17.80 },
+    STP: { reg:17.50, dis:12.50 },
+    STC: { reg:15.30, dis:11.00 },
+    FCA: { reg:30.00, dis:24.00 },
+    FCP: { reg:27.00, dis:22.50 },
+    FCC: { reg:24.00, dis:21.00 }
+};
+
 function updateTotalSTA(){
     var movieDay = document.getElementById("movie-day").value;
     var movieHour = document.getElementById("movie-hour").value;
@@ -286,9 +295,9 @@ function updateTotalSTA(){
     totalPriceSTA = 0.00;
     
     if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
-        totalPriceSTA += 17.80 * seatSTA;
+        totalPriceSTA += prices.STA.dis * seatSTA;
     }else{
-        totalPriceSTA += 19.80 * seatSTA;
+        totalPriceSTA += prices.STA.reg * seatSTA;
     }
 }
 
@@ -300,9 +309,9 @@ function updateTotalSTP(){
     totalPriceSTP = 0.00;
     
     if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
-        totalPriceSTP += 12.50 * seatSTP;
+        totalPriceSTP += prices.STP.dis * seatSTP;
     }else{
-        totalPriceSTP += 17.50 * seatSTP;
+        totalPriceSTP += prices.STP.reg * seatSTP;
     }
 }
 
@@ -314,9 +323,9 @@ function updateTotalSTC(){
     totalPriceSTC = 0.00;
     
     if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
-        totalPriceSTC += 11.00 * seatSTC;
+        totalPriceSTC += prices.STC.dis * seatSTC;
     }else{
-        totalPriceSTC += 15.30 * seatSTC;
+        totalPriceSTC += prices.STC.reg * seatSTC;
     }
 }
 
@@ -328,9 +337,9 @@ function updateTotalFCA(){
     totalPriceFCA = 0.00;
     
     if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
-        totalPriceFCA += 24.00 * seatFCA;
+        totalPriceFCA += prices.FCA.dis * seatFCA;
     }else{
-        totalPriceFCA += 30.00 * seatFCA;
+        totalPriceFCA += prices.FCA.reg * seatFCA;
     }
 }
 
@@ -342,9 +351,9 @@ function updateTotalFCP(){
     totalPriceFCP = 0.00;
     
     if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
-        totalPriceFCP += 22.50 * seatFCP;
+        totalPriceFCP += prices.FCP.dis * seatFCP;
     }else{
-        totalPriceFCP += 27.00 * seatFCP;
+        totalPriceFCP += prices.FCP.reg * seatFCP;
     }
 }
 
@@ -356,9 +365,9 @@ function updateTotalFCC(){
     totalPriceFCC = 0.00;
     
     if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
-        totalPriceFCC += 21.00 * seatFCC;
+        totalPriceFCC += prices.FCC.dis * seatFCC;
     }else{
-        totalPriceFCC += 24.00 * seatFCC;
+        totalPriceFCC += prices.FCC.reg * seatFCC;
     }
 }
 function updateTotalPrice(){
@@ -368,7 +377,8 @@ function updateTotalPrice(){
 }
 
 function minDate(){
-    var dateToday = Date.now();
-    
-    document.getElementById("cust-expiry").min = dateToday;
+   var today = new Date();
+   var date = today.getFullYear() + "-" + (today.getMonth() + 2);
+   
+   document.getElementById("cust-expiry").setAttribute("min", date);
 }
