@@ -270,5 +270,105 @@ function butSun(){
     }
 }
 
+var totalPriceSTA = 0.00;
+var totalPriceSTP = 0.00;
+var totalPriceSTC = 0.00;
+var totalPriceFCA = 0.00;
+var totalPriceFCP = 0.00;
+var totalPriceFCC = 0.00;
+var totalPrice = 0.00;
 
+function updateTotalSTA(){
+    var movieDay = document.getElementById("movie-day").value;
+    var movieHour = document.getElementById("movie-hour").value;
+    var seatSTA = document.getElementById("seats-STA").value;
+    
+    totalPriceSTA = 0.00;
+    
+    if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
+        totalPriceSTA += 17.80 * seatSTA;
+    }else{
+        totalPriceSTA += 19.80 * seatSTA;
+    }
+}
 
+function updateTotalSTP(){
+    var movieDay = document.getElementById("movie-day").value;
+    var movieHour = document.getElementById("movie-hour").value;
+    var seatSTP = document.getElementById("seats-STP").value;
+    
+    totalPriceSTP = 0.00;
+    
+    if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
+        totalPriceSTP += 12.50 * seatSTP;
+    }else{
+        totalPriceSTP += 17.50 * seatSTP;
+    }
+}
+
+function updateTotalSTC(){
+    var movieDay = document.getElementById("movie-day").value;
+    var movieHour = document.getElementById("movie-hour").value;
+    var seatSTC = document.getElementById("seats-STC").value;
+    
+    totalPriceSTC = 0.00;
+    
+    if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
+        totalPriceSTC += 11.00 * seatSTC;
+    }else{
+        totalPriceSTC += 15.30 * seatSTC;
+    }
+}
+
+function updateTotalFCA(){
+    var movieDay = document.getElementById("movie-day").value;
+    var movieHour = document.getElementById("movie-hour").value;
+    var seatFCA = document.getElementById("seats-FCA").value;
+    
+    totalPriceFCA = 0.00;
+    
+    if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
+        totalPriceFCA += 24.00 * seatFCA;
+    }else{
+        totalPriceFCA += 30.00 * seatFCA;
+    }
+}
+
+function updateTotalFCP(){
+    var movieDay = document.getElementById("movie-day").value;
+    var movieHour = document.getElementById("movie-hour").value;
+    var seatFCP = document.getElementById("seats-FCP").value;
+    
+    totalPriceFCP = 0.00;
+    
+    if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
+        totalPriceFCP += 22.50 * seatFCP;
+    }else{
+        totalPriceFCP += 27.00 * seatFCP;
+    }
+}
+
+function updateTotalFCC(){
+    var movieDay = document.getElementById("movie-day").value;
+    var movieHour = document.getElementById("movie-hour").value;
+    var seatFCC = document.getElementById("seats-FCC").value;
+    
+    totalPriceFCC = 0.00;
+    
+    if(movieDay == "MON" || movieDay == "TUE" || movieDay == "WED" || (movieDay == "THU" && movieHour == "T12") || movieDay == "FRI" && movieHour == "T12"){
+        totalPriceFCC += 21.00 * seatFCC;
+    }else{
+        totalPriceFCC += 24.00 * seatFCC;
+    }
+}
+function updateTotalPrice(){
+    totalPrice = totalPriceSTA + totalPriceSTP + totalPriceSTC + totalPriceFCA + totalPriceFCP + totalPriceFCC;
+        
+    document.getElementById("total").value = parseFloat(Math.round(totalPrice * 100) / 100).toFixed(2);
+}
+
+function minDate(){
+    var dateToday = Date.now();
+    
+    document.getElementById("cust-expiry").min = dateToday;
+}

@@ -298,9 +298,14 @@ button.active{
   clear: left;
   margin-top: 10px;
   text-align: right;
-  margin-left: 400px;
+  margin-left: 360px;
   font-size: 20px;
   margin-bottom: 30px;
+}
+
+.totalText{
+    font-size: 15px;
+    width: 50%
 }
 
 .customerInfo{

@@ -12,7 +12,7 @@
     <script src='script.js'></script>
   </head>
 
-  <body>
+  <body onload = "minDate()">
 
     <header>
       <div>
@@ -218,10 +218,10 @@
            <div class = bookingArea>
              <form action = "https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method = "post" target = "_blank">
                  
-                 <h3 id = "movieBooking"></h3>
+                 <h3 id = "movieBooking">You have not selected a time to book yet.</h3>
                  
                  <div class = movieInfoForm>
-                    <input type = "hidden" name = "movie[id]" id = "movie-id">
+                    <input type = "hidden" name = "movie[id]" id = "movie-id" value = "ACT">
                     <input type = "hidden" name = "movie[day]" id = "movie-day">
                     <input type = "hidden" name = "movie[hour]" id = "movie-hour">
                 </div>
@@ -229,7 +229,7 @@
                 <div class = "standardSeatsForm">
                     <h3 class = "formTitle">Standard</h3>
                     <div class = "seatOptionsForm">
-                        <label> Adult </label><select name = "seats[STA]" id = seats-STA>
+                        <label> Adult </label><select name = "seats[STA]" id = seats-STA onchange = "updateTotalSTA(), updateTotalPrice()">
                         <option value = " ">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
@@ -242,7 +242,7 @@
                         <option value = "9">9</option>
                         <option value = "10">10</option>
                     </select><br>
-                    <label> Concession </label><select name = "seats[STP]" id = seatsSTP>
+                    <label> Concession </label><select name = "seats[STP]" id = seats-STP onchange = "updateTotalSTP(), updateTotalPrice()">
                         <option value = " ">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
@@ -255,7 +255,7 @@
                         <option value = "9">9</option>
                         <option value = "10">10</option>
                     </select><br>
-                    <label> Children </label><select name = "seats[STC]" id = seatsSTC>
+                    <label> Children </label><select name = "seats[STC]" id = seats-STC onchange = "updateTotalSTC(), updateTotalPrice()">
                         <option value = " ">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
@@ -274,7 +274,7 @@
                 <div class = "firstClassSeatsForm">
                     <h3 class = "formTitle">First Class</h3>
                     <div class = "seatOptionsForm">
-                        <label> Adult </label><select name = "seats[FCA]" id = seatsFCA>
+                        <label> Adult </label><select name = "seats[FCA]" id = seats-FCA onchange = "updateTotalFCA(), updateTotalPrice()">
                         <option value = " ">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
@@ -287,7 +287,7 @@
                         <option value = "9">9</option>
                         <option value = "10">10</option>
                     </select><br>
-                    <label> Concession </label><select name = "seats[FCP]" id = seatsFCP>
+                    <label> Concession </label><select name = "seats[FCP]" id = seats-FCP onchange = "updateTotalFCP(), updateTotalPrice()">
                         <option value = " ">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
@@ -300,7 +300,7 @@
                         <option value = "9">9</option>
                         <option value = "10">10</option>
                     </select><br>
-                    <label> Children </label><select name = "seats[FCC]" id = seatsFCC>
+                    <label> Children </label><select name = "seats[FCC]" id = seats-FCC onchange = "updateTotalFCC(), updateTotalPrice()">
                         <option value = " ">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
@@ -317,15 +317,15 @@
                 </div><br>
                  
                  <div class = "totalPrice">
-                     <label> Total $ </label><input type = "text" name = "total" readonly id = total>
+                     <label> Total $ </label><input type = "text" name = "total" readonly id = total class = totalText>
                  </div>
                  
                 <div class = "customerInfo">
-                    <label> Name </label><input type = "text" name = "cust[name]" class = "cust-name" id = cust-name><br>
-                    <label> Email </label><input type = "email" name = "cust[email]" class = "cust-email" id = cust-email><br>
-                    <label> Mobile </label><input type = "tel" name = "cust[mobile]" class = "cust-mobile" id = cust-mobile><br>
-                    <label> Credit Card </label><input type = "text" name = "cust[card]" class = "cust-card" id = cust-card><br>
-                    <label> Expiry </label><input type = "month" name = "cust[expiry]" class = "cust-expiry"id = cust-expiry><br>
+                    <label> Name </label><input type = "text" name = "cust[name]" class = "cust-name" id = cust-name required pattern = "^[A-za-z- '.]+$"><br>
+                    <label> Email </label><input type = "email" name = "cust[email]" class = "cust-email" id = cust-email required><br>
+                    <label> Mobile </label><input type = "tel" name = "cust[mobile]" class = "cust-mobile" id = cust-mobile required pattern = "^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$"><br>
+                    <label> Credit Card </label><input type = "text" name = "cust[card]" class = "cust-card" id = cust-card required pattern = "^[0-9]{14,19}$"><br>
+                    <label> Expiry </label><input type = "month" name = "cust[expiry]" class = "cust-expiry"id = cust-expiry required ><br>
                     <input type = "submit" name = "order" class = "order" id = order>
                 </div>
              </form>
