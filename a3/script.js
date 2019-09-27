@@ -37,6 +37,7 @@ function synopsisACT(){
     document.getElementById("butSat").innerHTML = "SAT - 6PM";
     document.getElementById("butSun").innerHTML = "SUN - 6PM";
     document.getElementById("movieTrailer").src = "https://www.youtube.com/embed/TcMBFSGVi1c";
+    document.getElementById("movie-id").value = "ACT";
 }
 
 function synopsisRMC(){
@@ -50,6 +51,7 @@ function synopsisRMC(){
     document.getElementById("butSat").innerHTML = "SAT - 3PM";
     document.getElementById("butSun").innerHTML = "SUN - 3PM";
     document.getElementById("movieTrailer").src = "https://www.youtube.com/embed/uoDBvGF9pPU";
+    document.getElementById("movie-id").value = "RMC";
 }
 
 function synopsisANM(){
@@ -63,6 +65,7 @@ function synopsisANM(){
     document.getElementById("butSat").innerHTML = "SAT - 12PM";
     document.getElementById("butSun").innerHTML = "SUN - 12PM";
     document.getElementById("movieTrailer").src = "https://www.youtube.com/embed/7NiYVoqBt-8";
+    document.getElementById("movie-id").value = "ANM";
 }
 
 function synopsisAHF(){
@@ -76,5 +79,190 @@ function synopsisAHF(){
     document.getElementById("butSat").innerHTML = "SAT - 9PM";
     document.getElementById("butSun").innerHTML = "SUN - 9PM";
     document.getElementById("movieTrailer").src = "https://www.youtube.com/embed/4HmN9r1Fcr8";
+    document.getElementById("movie-id").value = "AHF";
 }
+
+function butMon(){
+    var movie = document.getElementById("movie-id").value;
+    
+    if(movie == "ACT"){
+        alert("Endgame is not running at this time.");
+    }
+    
+    if(movie == "RMC"){
+        document.getElementById("movie-day").value = "MON";
+        document.getElementById("movie-hour").value = "T18";
+        document.getElementById("movieBooking").innerHTML = "You are booking for Top End Wedding on Monday 6PM.";
+    }
+    
+    if(movie == "ANM"){
+       document.getElementById("movie-day").value = "MON";
+       document.getElementById("movie-hour").value = "T12"; 
+       document.getElementById("movieBooking").innerHTML = "You are booking for Dumbo on Monday 12PM.";
+    }
+    
+    if(movie == "AHF"){
+       alert("The Happy Prince is not running at this time.");
+    }
+}
+
+function butTue(){
+     var movie = document.getElementById("movie-id").value;
+    
+    if(movie == "ACT"){
+        alert("Endgame is not running at this time.");
+    }
+    
+    if(movie == "RMC"){
+        document.getElementById("movie-day").value = "TUE";
+        document.getElementById("movie-hour").value = "T18";
+        document.getElementById("movieBooking").innerHTML = "You are booking for Top End Wedding on Tuesday 6PM.";
+    }
+    
+    if(movie == "ANM"){
+       document.getElementById("movie-day").value = "TUE";
+       document.getElementById("movie-hour").value = "T12";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Dumbo on Tuesday 12PM.";
+    }
+    
+    if(movie == "AHF"){
+       alert("The Happy Prince is not running at this time.");
+    }
+}
+
+function butWed(){
+     var movie = document.getElementById("movie-id").value;
+    
+    if(movie == "ACT"){
+       document.getElementById("movie-day").value = "WED";
+       document.getElementById("movie-hour").value = "T21";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Endgame on Wednesday 9PM.";
+    }
+    
+    if(movie == "RMC"){
+        alert("Top End Wedding is not running at this time.");
+    }
+    
+    if(movie == "ANM"){
+       document.getElementById("movie-day").value = "WED";
+       document.getElementById("movie-hour").value = "T18";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Dumbo on Wednesday 6PM.";
+    }
+    
+    if(movie == "AHF"){
+       document.getElementById("movie-day").value = "WED";
+       document.getElementById("movie-hour").value = "T12";
+       document.getElementById("movieBooking").innerHTML = "You are booking for The Happy Prince on Wednesday 12PM.";
+    }
+}
+
+function butThu(){
+     var movie = document.getElementById("movie-id").value;
+    
+    if(movie == "ACT"){
+       document.getElementById("movie-day").value = "THU";
+       document.getElementById("movie-hour").value = "T21";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Endgame on Thursday 9PM.";
+    }
+    
+    if(movie == "RMC"){
+        alert("Top End Wedding is not running at this time.");
+    }
+    
+    if(movie == "ANM"){
+       document.getElementById("movie-day").value = "THU";
+       document.getElementById("movie-hour").value = "T18";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Dumbo on Thursday 6PM.";
+    }
+    
+    if(movie == "AHF"){
+       document.getElementById("movie-day").value = "THU";
+       document.getElementById("movie-hour").value = "T12";
+       document.getElementById("movieBooking").innerHTML = "You are booking for The Happy Prince on Thursday 12PM.";
+    }
+}
+
+function butFri(){
+     var movie = document.getElementById("movie-id").value;
+    
+    if(movie == "ACT"){
+       document.getElementById("movie-day").value = "FRI";
+       document.getElementById("movie-hour").value = "T21";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Endgame on Friday 9PM.";
+    }
+    
+    if(movie == "RMC"){
+       alert("Top End Wedding is not running at this time.");
+    }
+    
+    if(movie == "ANM"){
+       document.getElementById("movie-day").value = "FRI";
+       document.getElementById("movie-hour").value = "T18";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Dumbo on Friday 6PM.";
+    }
+    
+    if(movie == "AHF"){
+       document.getElementById("movie-day").value = "FRI";
+       document.getElementById("movie-hour").value = "T12";
+       document.getElementById("movieBooking").innerHTML = "You are booking for The Happy Prince on Friday 12PM.";
+    }
+}
+
+function butSat(){
+     var movie = document.getElementById("movie-id").value;
+    
+    if(movie == "ACT"){
+       document.getElementById("movie-day").value = "SAT";
+       document.getElementById("movie-hour").value = "T18";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Endgame on Saturday 6PM.";
+    }
+    
+    if(movie == "RMC"){
+       document.getElementById("movie-day").value = "SAT";
+       document.getElementById("movie-hour").value = "T15";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Top End Wedding on Saturday 3PM.";
+    }
+    
+    if(movie == "ANM"){
+       document.getElementById("movie-day").value = "SAT";
+       document.getElementById("movie-hour").value = "T12";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Dumbo on Saturday 12PM.";
+    }
+    
+    if(movie == "AHF"){
+       document.getElementById("movie-day").value = "SAT";
+       document.getElementById("movie-hour").value = "T21";
+       document.getElementById("movieBooking").innerHTML = "You are booking for The Happy Prince on Saturday 9PM.";
+    }
+}
+
+function butSun(){
+    var movie = document.getElementById("movie-id").value;
+    
+    if(movie == "ACT"){
+       document.getElementById("movie-day").value = "SUN";
+       document.getElementById("movie-hour").value = "T18";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Endgame on Sunday 6PM.";
+    }
+    
+    if(movie == "RMC"){
+       document.getElementById("movie-day").value = "SUN";
+       document.getElementById("movie-hour").value = "T15";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Top End Wedding on Sunday 3PM.";
+    }
+    
+    if(movie == "ANM"){
+       document.getElementById("movie-day").value = "SUN";
+       document.getElementById("movie-hour").value = "T12";
+       document.getElementById("movieBooking").innerHTML = "You are booking for Dumbo on Sunday 12PM.";
+    }
+    
+    if(movie == "AHF"){
+       document.getElementById("movie-day").value = "SUN";
+       document.getElementById("movie-hour").value = "T21";
+       document.getElementById("movieBooking").innerHTML = "You are booking for The Happy Prince on Sunday 9PM.";
+    }
+}
+
+
 

@@ -200,13 +200,13 @@
 
             <div class = booking>
               MAKE A BOOKING: <br>
-              <button id="butMon">MON - N/A</button>
-              <button id="butTue">TUE - N/A</button>
-              <button id="butWed">WED - 9PM</button>
-              <button id="butThu">THU - 9PM</button>
-              <button id="butFri">FRI - 9PM</button>
-              <button id="butSat">SAT - 6PM</button>
-              <button id="butSun">SUN - 6PM</button>
+              <button id="butMon" class = "bookingButton" onclick = "butMon()">MON - N/A</button>
+              <button id="butTue" class = "bookingButton" onclick = "butTue()">TUE - N/A</button>
+              <button id="butWed" class = "bookingButton" onclick = "butWed()">WED - 9PM</button>
+              <button id="butThu" class = "bookingButton" onclick = "butThu()">THU - 9PM</button>
+              <button id="butFri" class = "bookingButton" onclick = "butFri()">FRI - 9PM</button>
+              <button id="butSat" class = "bookingButton" onclick = "butSat()">SAT - 6PM</button>
+              <button id="butSun" class = "bookingButton" onclick = "butSun()">SUN - 6PM</button>
             </div>
           </div>
 
@@ -217,16 +217,46 @@
 
            <div class = bookingArea>
              <form action = "https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method = "post" target = "_blank">
-                <div class = movieInfoForm>
+                 
+                 <h3 id = "movieBooking"></h3>
+                 
+                 <div class = movieInfoForm>
                     <input type = "hidden" name = "movie[id]" id = "movie-id">
                     <input type = "hidden" name = "movie[day]" id = "movie-day">
                     <input type = "hidden" name = "movie[hour]" id = "movie-hour">
                 </div>
     
                 <div class = "standardSeatsForm">
-                    <h2>Standard</h2>
-                    <label> Adult </label><select name = "seats[STA]">
-                        <option value = "">Please Select</option>
+                    <h3 class = "formTitle">Standard</h3>
+                    <div class = "seatOptionsForm">
+                        <label> Adult </label><select name = "seats[STA]" id = seats-STA>
+                        <option value = " ">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select><br>
+                    <label> Concession </label><select name = "seats[STP]" id = seatsSTP>
+                        <option value = " ">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select><br>
+                    <label> Children </label><select name = "seats[STC]" id = seatsSTC>
+                        <option value = " ">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
                         <option value = "3">3</option>
@@ -238,38 +268,40 @@
                         <option value = "9">9</option>
                         <option value = "10">10</option>
                     </select>
-                    <label> Concession </label><select name = "seats[STP]">
-                        <option value = "">Please Select</option>
-                        <option value = "1">1</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5</option>
-                        <option value = "6">6</option>
-                        <option value = "7">7</option>
-                        <option value = "8">8</option>
-                        <option value = "9">9</option>
-                        <option value = "10">10</option>
-                    </select>
-                    <label> Children </label><select name = "seats[STC]">
-                        <option value = "">Please Select</option>
-                        <option value = "1">1</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5</option>
-                        <option value = "6">6</option>
-                        <option value = "7">7</option>
-                        <option value = "8">8</option>
-                        <option value = "9">9</option>
-                        <option value = "10">10</option>
-                    </select>
-                </div>
+                    </div>
+                </div><br>
                  
                 <div class = "firstClassSeatsForm">
-                    <h2>First Class</h2>
-                    <label> Adult </label><select name = "seats[FCA]">
-                        <option value = "">Please Select</option>
+                    <h3 class = "formTitle">First Class</h3>
+                    <div class = "seatOptionsForm">
+                        <label> Adult </label><select name = "seats[FCA]" id = seatsFCA>
+                        <option value = " ">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select><br>
+                    <label> Concession </label><select name = "seats[FCP]" id = seatsFCP>
+                        <option value = " ">Please Select</option>
+                        <option value = "1">1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5</option>
+                        <option value = "6">6</option>
+                        <option value = "7">7</option>
+                        <option value = "8">8</option>
+                        <option value = "9">9</option>
+                        <option value = "10">10</option>
+                    </select><br>
+                    <label> Children </label><select name = "seats[FCC]" id = seatsFCC>
+                        <option value = " ">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
                         <option value = "3">3</option>
@@ -281,47 +313,21 @@
                         <option value = "9">9</option>
                         <option value = "10">10</option>
                     </select>
-                    <label> Concession </label><select name = "seats[FCP]">
-                        <option value = "">Please Select</option>
-                        <option value = "1">1</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5</option>
-                        <option value = "6">6</option>
-                        <option value = "7">7</option>
-                        <option value = "8">8</option>
-                        <option value = "9">9</option>
-                        <option value = "10">10</option>
-                    </select>
-                    <label> Children </label><select name = "seats[FCC]">
-                        <option value = "">Please Select</option>
-                        <option value = "1">1</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5</option>
-                        <option value = "6">6</option>
-                        <option value = "7">7</option>
-                        <option value = "8">8</option>
-                        <option value = "9">9</option>
-                        <option value = "10">10</option>
-                    </select>
-                </div>
+                    </div>
+                </div><br>
                  
                  <div class = "totalPrice">
-                     <label> Total $ </label><input type = "text" name = "total" readonly>
+                     <label> Total $ </label><input type = "text" name = "total" readonly id = total>
                  </div>
                  
                 <div class = "customerInfo">
-                    <label> Name </label><input type = "text" name = "cust[name]">
-                    <label> Email </label><input type = "email" name = "cust[email]">
-                    <label> Mobile </label><input type = "tel" name = "cust[mobile]">
-                    <label> Credit Card </label><input type = "text" name = "cust[card]">
-                    <label> Expiry </label><input type = "month" name = "cust[expiry]">
-                    <input type = "submit" name = "order">
+                    <label> Name </label><input type = "text" name = "cust[name]" class = "cust-name" id = cust-name><br>
+                    <label> Email </label><input type = "email" name = "cust[email]" class = "cust-email" id = cust-email><br>
+                    <label> Mobile </label><input type = "tel" name = "cust[mobile]" class = "cust-mobile" id = cust-mobile><br>
+                    <label> Credit Card </label><input type = "text" name = "cust[card]" class = "cust-card" id = cust-card><br>
+                    <label> Expiry </label><input type = "month" name = "cust[expiry]" class = "cust-expiry"id = cust-expiry><br>
+                    <input type = "submit" name = "order" class = "order" id = order>
                 </div>
-                 
              </form>
            </div>
 

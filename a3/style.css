@@ -66,10 +66,17 @@ nav{
   width: 31.85%;
 }
 
-.navbar a:hover{
+.navbar a:hover, .order:hover, .bookingButton:hover{
   background-color: gray;
   transition: 0.2s;
+  cursor: pointer;
 }
+
+button.active{
+  background-color: gray;
+}
+
+
 
 .firstHeading{
   font-size: 40px;
@@ -152,6 +159,7 @@ nav{
   border: 1px solid white;
   overflow: auto;
   display: inline-block;
+  cursor: pointer;
 
 }
 
@@ -245,13 +253,10 @@ nav{
   display: inline-block;
 }
 
-.booking button:hover{
+.booking button active{
   background-color: gray;
 }
 
-.booking button:active{
-  background-color: black;
-}
 
 .bookingArea{
   text-align: center;
@@ -260,8 +265,65 @@ nav{
   color: white;
   padding: 10px;
   border-top: 1px solid white;
+  overflow: auto;
 }
 
+.standardSeatsForm{
+  float: left;
+  text-align: right;
+  margin-left: 350px;
+}
+
+.seatOptionsForm{
+  border: 1px solid white;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.formTitle{
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+.firstClassSeatsForm{
+  float: left;
+  clear: left;
+  text-align: right;
+  margin-left: 350px;
+}
+
+.totalPrice{
+  float: left;
+  clear: left;
+  margin-top: 10px;
+  text-align: right;
+  margin-left: 400px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.customerInfo{
+    text-align: right;
+    margin-right: 400px;
+    margin-top: 20px;
+}
+
+.cust-name, .cust-email, .cust-mobile, .cust-card, .cust-expiry{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.order{
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px; 
+  margin-top: 50px;
+}
 
 
 /*for mobile or smaller screens*/
