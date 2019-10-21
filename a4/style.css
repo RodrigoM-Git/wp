@@ -1,0 +1,342 @@
+/* Insert your styles here */
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: url("../../media/A2/Background.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sticky{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 1px;
+  text-align: center;
+  font-family: 'Volkhov', serif;
+  font-size: 60px;
+  opacity: 0.9;
+}
+
+footer{
+  background-color: #a7adba;
+  padding: 5px;
+  opacity: 0.9;
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+nav{
+  font-family: 'Source Code Pro', monospace;
+}
+
+.navbar {
+  background-color: black;
+  overflow: auto;
+  width: 100%;
+}
+
+.navbar a{
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 31.85%;
+}
+
+.navbar a:hover, .order:hover, .bookingButton:hover{
+  background-color: gray;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+button.active{
+  background-color: gray;
+}
+
+
+
+.firstHeading{
+  font-size: 40px;
+  background-color: black;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  margin-bottom: 0;
+  margin-top: 350px;
+}
+
+
+.aboutus{
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 0.9;
+  padding: 50px;
+}
+
+.seat1{
+  width: 300px;
+  height: auto;
+  border: 5px solid gray;
+  margin-right: 100px;
+}
+
+.seat2{
+  width: 300px;
+  height: auto;
+  border: 5px solid gray;
+  margin-left: 100px;
+}
+
+.sectionHeading{
+  font-size: 40px;
+  background-color: black;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.pricesTable{
+  display: table;
+  margin: 0 auto;
+  background-color: black;
+  opacity: 0.9;
+  font-size: 20px;
+  color: white;
+}
+
+.tableRow{
+  display: table-row;
+}
+
+.tableCell{
+  border: 1px solid white;
+  display: table-cell;
+  padding: 3px 10px;
+}
+
+.pricesBackground{
+  background-color: black;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  opacity: 0.9;
+}
+
+.movieBox{
+  background-color: black;
+  height: 250px;
+  width: 350px;
+  margin: 0 auto;
+  border: 1px solid white;
+  overflow: auto;
+  display: inline-block;
+  cursor: pointer;
+
+}
+
+.movieBox div img{
+  width: auto;
+  height: 200px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid white;
+}
+
+.movieText{
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.movieTitle{
+  font-size: 20px;
+}
+
+.movieTimes{
+  font-size: 12px;
+}
+
+.nowShowing1{
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.nowShowing2{
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.synopsis{
+  background-color: black;
+  opacity: 0.9;
+  margin: 0 auto;
+  overflow: auto;
+  color: white;
+  border-top: 1px solid white;
+}
+
+.trailer{
+  float: right;
+  padding: 40px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.trailer iframe{
+  width: 450px;
+  height: 250px;
+  border: 1px solid white;
+}
+
+.synopsisText{
+  float: left;
+  width: 55%;
+  padding: 30px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.synopsisTitle{
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.plotDescription{
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.bookingText{
+  float: left;
+  font-size: 20px;
+}
+
+.booking button{
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.booking button active{
+  background-color: gray;
+}
+
+
+.bookingArea{
+  text-align: center;
+  background-color: black;
+  opacity: 0.9;
+  color: white;
+  padding: 10px;
+  border-top: 1px solid white;
+  overflow: auto;
+}
+
+.standardSeatsForm{
+  float: left;
+  text-align: right;
+  margin-left: 350px;
+}
+
+.seatOptionsForm{
+  border: 1px solid white;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.formTitle{
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+.firstClassSeatsForm{
+  float: left;
+  clear: left;
+  text-align: right;
+  margin-left: 350px;
+}
+
+.totalPrice{
+  float: left;
+  clear: left;
+  margin-top: 10px;
+  text-align: right;
+  margin-left: 360px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.totalText{
+    font-size: 15px;
+    width: 50%
+}
+
+.customerInfo{
+    text-align: right;
+    margin-right: 400px;
+    margin-top: 20px;
+}
+
+.cust-name, .cust-email, .cust-mobile, .cust-card, .cust-expiry{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.order{
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px; 
+  margin-top: 50px;
+}
+
+
+/*for mobile or smaller screens*/
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }    
+}
