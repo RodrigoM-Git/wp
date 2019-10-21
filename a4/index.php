@@ -190,7 +190,7 @@
          </div>
 
            <div class = bookingArea>
-             <form action = "https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method = "post" target = "_blank">
+             <form action = "receipt.php" method = "post" target = "_blank">
                  
                  <h3 id = "movieBooking">You have not selected a time to book yet.</h3>
                  
