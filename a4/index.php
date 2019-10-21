@@ -1,8 +1,7 @@
 <?php 
     include_once('tools.php'); 
-    top_module('Assignment 4');
+    topModule('Assignment 4');
 ?>
-
 
       <section name = "aboutus" id = "aboutUs">
           <h2 class = "firstHeading" id = "aboutus"> ABOUT US </h2>
@@ -302,7 +301,6 @@
                     <label> Credit Card </label><input type = "text" name = "cust[card]" class = "cust-card" id = cust-card required pattern = "^[0-9]{14,19}$"><br>
                     <label> Expiry </label><input type = "month" name = "cust[expiry]" class = "cust-expiry" id = cust-expiry required ><br>
                     <input type = "submit" name = "order" class = "order" id = order>
-                    <input type = "submit" name = "session-reset" class = "order" id = "session-reset", value = 'Reset the session'>
                 </div>
              </form>
            </div>

@@ -1,11 +1,12 @@
 <?php
-  session_start();
-
+    session_start();
 // Put your PHP functions and modules here
-function top_module($pageTitle){
+    error_reporting( E_ERROR | E_WARNING | E_PARSE );
+
+function topModule($pageTitle) {
     $html = <<<"OUTPUT"
-    <!DOCTYPE html>
-    <html lang='en'>
+<!DOCTYPE html>
+<html lang='en'>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +35,9 @@ function top_module($pageTitle){
       </div>
     </nav>
     <main>
-    OUTPUT;
+OUTPUT;
     echo $html;
-};
+}
+
+
 ?>
