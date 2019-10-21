@@ -36,6 +36,5 @@ function top_module($pageTitle){
     <main>
     OUTPUT;
     echo $html;
-}
-
+};
 ?>
