@@ -1,6 +1,37 @@
 <?php 
     include_once('tools.php'); 
     topModule('Assignment 4');
+    php2js($moviesObject, moviesArray);
+    php2js($pricesObject, pricesArray);
+
+$id = '';
+$day = '';
+$hour = '';
+$movieSessionError = '';
+$seatsError = '';
+$nameError = '';
+$emailError = '';
+$mobileError = '';
+$cardError = '';
+$expiryError = '';
+
+$errorsFound = false;
+if(!empty($_POST)){
+    if(empty($_POST['movie']['day']) || empty($_POST['movie']['hour'])){
+        $movieSessionError = '<span style="color: red">Please choose a movie session </span><br>';
+        $errorsFound = true;
+    }
+    if(empty($_POST['total'])){
+        $seatsError = '<span style="color: red">Please choose your seats of choice </span><br>';
+        $errorsFound = true;
+    }
+    if(!$errorsFound){
+        header('Location: receipt.php');
+        $_SESSION['cart'] = $_POST;
+    }else{
+    }
+}
+
 ?>
 
       <section name = "aboutus" id = "aboutUs">
@@ -190,21 +221,21 @@
          </div>
 
            <div class = bookingArea>
-             <form action = "receipt.php" method = "post" target = "_blank">
+             <form action = "index.php" method = "post" target = "_blank">
                  
                  <h3 id = "movieBooking">You have not selected a time to book yet.</h3>
                  
                  <div class = movieInfoForm>
                     <input type = "hidden" name = "movie[id]" id = "movie-id" value = "ACT">
-                    <input type = "hidden" name = "movie[day]" id = "movie-day">
-                    <input type = "hidden" name = "movie[hour]" id = "movie-hour">
+                    <input type = "hidden" name = "movie[day]" id = "movie-day"><?= $movieSessionError ?>
+                    <input type = "hidden" name = "movie[hour]" id = "movie-hour"><?= $seatsError ?>
                 </div>
     
                 <div class = "standardSeatsForm">
                     <h3 class = "formTitle">Standard</h3>
                     <div class = "seatOptionsForm">
                         <label> Adult </label><select name = "seats[STA]" id = seats-STA onchange = "updateTotalSTA(), updateTotalPrice()">
-                        <option value = " ">Please Select</option>
+                        <option value = "">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
                         <option value = "3">3</option>
@@ -217,7 +248,7 @@
                         <option value = "10">10</option>
                     </select><br>
                     <label> Concession </label><select name = "seats[STP]" id = seats-STP onchange = "updateTotalSTP(), updateTotalPrice()">
-                        <option value = " ">Please Select</option>
+                        <option value = "">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
                         <option value = "3">3</option>
@@ -230,7 +261,7 @@
                         <option value = "10">10</option>
                     </select><br>
                     <label> Children </label><select name = "seats[STC]" id = seats-STC onchange = "updateTotalSTC(), updateTotalPrice()">
-                        <option value = " ">Please Select</option>
+                        <option value = "">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
                         <option value = "3">3</option>
@@ -249,7 +280,7 @@
                     <h3 class = "formTitle">First Class</h3>
                     <div class = "seatOptionsForm">
                         <label> Adult </label><select name = "seats[FCA]" id = seats-FCA onchange = "updateTotalFCA(), updateTotalPrice()">
-                        <option value = " ">Please Select</option>
+                        <option value = "">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
                         <option value = "3">3</option>
@@ -262,7 +293,7 @@
                         <option value = "10">10</option>
                     </select><br>
                     <label> Concession </label><select name = "seats[FCP]" id = seats-FCP onchange = "updateTotalFCP(), updateTotalPrice()">
-                        <option value = " ">Please Select</option>
+                        <option value = "">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
                         <option value = "3">3</option>
@@ -275,7 +306,7 @@
                         <option value = "10">10</option>
                     </select><br>
                     <label> Children </label><select name = "seats[FCC]" id = seats-FCC onchange = "updateTotalFCC(), updateTotalPrice()">
-                        <option value = " ">Please Select</option>
+                        <option value = "">Please Select</option>
                         <option value = "1">1</option>
                         <option value = "2">2</option>
                         <option value = "3">3</option>
@@ -325,4 +356,11 @@
   </body>
 </html>
 
-
+<div class = debugSection>
+    <h3> DEBUG SECTION </h3>
+    <?php
+    showPostDetails();
+    showSessionDetails();
+    printMyCode();
+    ?>
+</div>

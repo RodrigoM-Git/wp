@@ -330,6 +330,12 @@ button.active{
   margin-top: 50px;
 }
 
+.debugSection{
+    background-color: white;
+    padding: 10px;
+    
+}
+
 
 /*for mobile or smaller screens*/
 @media screen and (max-width: 500px) {
