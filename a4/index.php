@@ -1,8 +1,6 @@
 <?php 
     include_once('tools.php'); 
     topModule('Assignment 4');
-    php2js($moviesObject, moviesArray);
-    php2js($pricesObject, pricesArray);
 
 $id = '';
 $day = '';
@@ -16,7 +14,11 @@ $cardError = '';
 $expiryError = '';
 
 $errorsFound = false;
-if(!empty($_POST)){
+ if(isset($_POST['clear-session'])){
+        unset($_SESSION['cart']);
+    }
+
+if(!empty($_POST) && !isset($_POST['clear-session'])){
     if(empty($_POST['movie']['day']) || empty($_POST['movie']['hour'])){
         $movieSessionError = '<span style="color: red">Please choose a movie session </span><br>';
         $errorsFound = true;
@@ -25,11 +27,87 @@ if(!empty($_POST)){
         $seatsError = '<span style="color: red">Please choose your seats of choice </span><br>';
         $errorsFound = true;
     }
+    
+    $custName = $_POST['cust']['name'];
+    if(!empty($custName)){
+        if(preg_match("^[A-Za-z- '.]+$^", $custName)){
+        }else{
+            $nameError = '<span style="color: red">Name contains invalid characters</span>';
+            $errorsFound = true;
+        }
+    }else{
+        $nameError = '<span style="color: red">Please enter a name</span>';
+        $errorsFound = true;
+    }
+    
+    $custEmail = $_POST['cust']['email'];
+    if(!empty($custEmail)){
+        if(filter_var($custEmail, FILTER_VALIDATE_EMAIL)){
+        }else{
+            $emailError = '<span style="color: red">Invalid email</span>';
+            $errorsFound = true;
+        }
+    }else{
+        $emailError = '<span style="color: red">Please enter an email</span>';
+        $errorsFound = true;
+    }
+    
+    $custMobile = $_POST['cust']['mobile'];
+    if(!empty($custMobile)){
+        if(preg_match("^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$^", $custMobile)){
+        }else{
+            $mobileError = '<span style="color: red">Invalid mobile number</span>';
+            $errorsFound = true;
+        }
+    }else{
+        $mobileError = '<span style="color: red">Please enter a mobile number</span>';
+        $errorsFound = true;
+    }
+    
+    $custCard = $_POST['cust']['card'];
+    if(!empty($custCard)){
+        if(preg_match("^[0-9]{14,19}$^", $custCard)){
+        }else{
+            $cardError = '<span style="color: red">Invalid card details</span>';
+            $errorsFound = true;
+        }
+    }else{
+        $cardError = '<span style="color: red">Please enter your card details</span>';
+        $errorsFound = true;
+    }
+    
+    $custExpiry = $_POST['cust']['expiry'];
+    if(!empty($custExpiry)){
+        $custExpiryArray = explode('-',$custExpiry);
+        $custMonth = $custExpiryArray[1];
+        $custYear = $custExpiryArray[0];
+        $monthToday = date('m');
+        $yearToday = date('Y');
+        echo "<p>{$custYear}</p>";
+        echo "<p>{$custMonth}</p>";
+    
+        if($custYear > $yearToday){
+        }else if($custYear = $yearToday){
+            if($custMonth > $monthToday){
+            }else{
+                $expiryError = '<span style="color: red">Expiry must be at least next month</span>';
+                $errorsFound = true;
+            }
+        }else{
+            $expiryError = '<span style="color: red">Expiry must be at least next month</span>';
+            $errorsFound = true;
+        }
+    }else{
+         $expiryError = '<span style="color: red">Please enter your card expiry date</span>';
+            $errorsFound = true;
+    }
+    
     if(!$errorsFound){
         header('Location: receipt.php');
         $_SESSION['cart'] = $_POST;
     }else{
     }
+
 }
 
 ?>
@@ -326,41 +404,35 @@ if(!empty($_POST)){
                  </div>
                  
                 <div class = "customerInfo">
-                    <label> Name </label><input type = "text" name = "cust[name]" class = "cust-name" id = cust-name required pattern = "^[A-Za-z- '.]+$"><br>
-                    <label> Email </label><input type = "email" name = "cust[email]" class = "cust-email" id = cust-email required><br>
-                    <label> Mobile </label><input type = "tel" name = "cust[mobile]" class = "cust-mobile" id = cust-mobile required pattern = "^(\(04\)|04|\+614)[ ]?\d{4}[ ]?\d{4}$"><br>
-                    <label> Credit Card </label><input type = "text" name = "cust[card]" class = "cust-card" id = cust-card required pattern = "^[0-9]{14,19}$"><br>
-                    <label> Expiry </label><input type = "month" name = "cust[expiry]" class = "cust-expiry" id = cust-expiry required ><br>
+                    <?= $nameError ?><br>
+                    <label> Name </label><input type = "text" name = "cust[name]" class = "cust-name" id = cust-name><br>
+                    <?= $emailError ?><br>
+                    <label> Email </label><input type = "text" name = "cust[email]" class = "cust-email" id = cust-email><br>
+                    <?= $mobileError ?><br>
+                    <label> Mobile </label><input type = "tel" name = "cust[mobile]" class = "cust-mobile" id = cust-mobile><br>
+                    <?= $cardError ?><br>
+                    <label> Credit Card </label><input type = "text" name = "cust[card]" class = "cust-card" id = cust-card><br>
+                    <?= $expiryError ?><br>
+                    <label> Expiry </label><input type = "month" name = "cust[expiry]" class = "cust-expiry" id = cust-expiry><br>
                     <input type = "submit" name = "order" class = "order" id = order>
                 </div>
              </form>
            </div>
 
       </section>
-    </main>
 
-    <footer id = "footer">
-      <div>
-        Lunardo Cinemas. Contact us at...<br>
-        Email: customerhelp@lunardocinemas.org<br>
-        Phone: 0384756393<br>
-        Address: 203 Town Street 1111<br>
-      </div>
-      <div>&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Rodrigo Miguel Rojas - s3784466 Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
-      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-      </footer>    
-
-  </body>
-</html>
+<?php endModule(); ?>
 
 <div class = debugSection>
     <h3> DEBUG SECTION </h3>
     <?php
     showPostDetails();
     showSessionDetails();
+    ?>
+    <form action = "index.php" method = "post">
+    <input type = "submit" name = "clear-session" value = "clear session">
+    </form>
+    <?php
     printMyCode();
     ?>
 </div>

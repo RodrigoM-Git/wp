@@ -19,7 +19,7 @@ function topModule($pageTitle) {
     <script src='script.js'></script>
   </head>
 
-  <body onload = "minDate()">
+  <body>
 
     <header>
       <div>
@@ -35,6 +35,32 @@ function topModule($pageTitle) {
       </div>
     </nav>
     <main>
+OUTPUT;
+    echo $html;
+}
+
+$lastModifiedDate = date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME']));
+
+function endModule(){
+    $html = <<<"OUTPUT"
+    </main>
+
+    <footer id = "footer">
+      <div>
+        Lunardo Cinemas. Contact us at...<br>
+        Email: customerhelp@lunardocinemas.org<br>
+        Phone: 0384756393<br>
+        Address: 203 Town Street 1111<br>
+      </div>
+      <div>&copy;<script>
+        document.write(new Date().getFullYear());
+      </script> Rodrigo Miguel Rojas - s3784466 Last modified $lastModifiedDate.</div>
+      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+      </footer>    
+
+  </body>
+</html>
 OUTPUT;
     echo $html;
 }
