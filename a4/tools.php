@@ -39,28 +39,24 @@ OUTPUT;
     echo $html;
 }
 
-$lastModifiedDate = date("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME']));
-
-function endModule(){
+function topModuleReceipt($pageTitle){
     $html = <<<"OUTPUT"
-    </main>
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title>$pageTitle</title>
 
-    <footer id = "footer">
-      <div>
-        Lunardo Cinemas. Contact us at...<br>
-        Email: customerhelp@lunardocinemas.org<br>
-        Phone: 0384756393<br>
-        Address: 203 Town Street 1111<br>
-      </div>
-      <div>&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Rodrigo Miguel Rojas - s3784466 Last modified $lastModifiedDate.</div>
-      <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-      <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-      </footer>    
-
-  </body>
-</html>
+        <!-- Keep wireframe.css for debugging, add your css to style.css -->
+        <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+        <link id='stylecss' type="text/css" rel="stylesheet" href="styleReceipt.css">
+        <script src='../wireframe.js'></script>
+        <script src='script.js'></script>
+    </head>
+    
+    <body>
+        <main>
 OUTPUT;
     echo $html;
 }
