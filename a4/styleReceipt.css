@@ -50,10 +50,45 @@ th{
     background-color: #dddddd;
 }
 
-}
-
 .smallTable{
     border-collapse: collapse;
     width: 25%;
-    margin-left: 80px;
+    margin-left: 516px;
+    margin-bottom: 75px;
 }
+
+.receiptHeader{
+    text-align: center;
+    width: 80%;
+    border-top: 1px solid black;
+    margin-left: 78px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid black;
+    margin-bottom: 75px;
+}
+
+.title{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.businessDetails{
+    margin-top: 0;
+    padding-left: 50px;
+}
+
+.custName{
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.summary{
+    padding-top: 25px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+

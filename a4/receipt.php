@@ -45,11 +45,11 @@ if(empty($_SESSION['cart'])){
     $orderDetails = [$date, $custName, $custEmail, $custMobile, $movieID, $movieDay, $movieHour,
                      $staQTY, $stpQTY, $stcQTY, $fcaQTY, $fcpQTY, $fccQTY, $seatsTotal];
   
-//    $fp = fopen("bookings.txt", "a");
-//    flock($fp, LOCK_EX);
-//    fputcsv($fp, $orderDetails, "\t");
-//    flock($fp, LOCK_UN);
-//    fclose($fp); 
+    $fp = fopen("bookings.txt", "a");
+    flock($fp, LOCK_EX);
+    fputcsv($fp, $orderDetails, "\t");
+    flock($fp, LOCK_UN);
+    fclose($fp); 
     
     topModuleReceipt('Receipt');
 }
@@ -57,28 +57,26 @@ if(empty($_SESSION['cart'])){
 <page size = "A4">
     <section id = "heading">
         <div id = "businessTitle" class = "businessTitle">
-            <h2>LUNARDO CINEMAS</h2>
+            <h1 class = title>LUNARDO CINEMAS</h1>
         </div>
-        <div id = "businessDetails" class = "businessDetails">
-            <p>
-                Lunardo Cinemas<br>
-                ABN: 00 123 456 789
-            </p>
-        </div>
+        <div id = "businessDetails" class = "businessDetails">ABN: 00 123 456 789</div>
     </section>
 
     <section id = "customerDetails">
         <div id = "custName" class = "custName"><?= $custName ?>,</div>
-        <div id = "summary" class = "summary">This is the receipt for your movie order at Lunardo Cinemas</div>
+        <div id = "summary" class = "summary">
+            This is the receipt for your movie order at Lunardo Cinemas<br><br>
+            <a href = "tickets.php" target = _blank>Click here to view your tickets</a>
+        </div>
         <div id = "receiptDetails">
-            <h3 id = "receiptHeader">RECEIPT</h3>
+            <h2 id = "receiptHeader" class = "receiptHeader"><u>RECEIPT</u></h2>
             <table id = "receiptInfo" class = "smallTable">
                 <tr>
                     <th>Receipt #</th>
                     <td>1234</td>
                 </tr>
                 <tr>
-                    <th>Issued</th>
+                    <th>Date</th>
                     <td><?= $date ?></td>
                 </tr>
             </table>
