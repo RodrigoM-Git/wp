@@ -192,4 +192,26 @@ function php2js($arr, $arrName) {
     echo "</script> \n \n";
 }
 
+function makeTicket($movieName, $movieDay, $movieTime, $seatType){
+    echo '<page size = "A4">';
+    echo '<section id = ticket class = ticket>';
+    echo '<div id = movieDetails class = "movieDetails">';
+    echo '<h2>Lunardo Cinemas</h2>';
+    echo '<p>';
+    echo "Movie: $movieName <br>";
+    echo "Day: $movieDay <br>";
+    echo "Time: $movieTime<br>";
+    echo "Seat: $seatType<br><br>";
+    echo 'Enjoy your movie!';
+    echo '</p>';
+    echo '</div>';
+    echo '<div id = admitOne class = admitOne>';
+    echo 'ADMIT<br>';
+    echo 'ONE';
+    echo '</div>';
+    echo '</section>';
+    echo '</page>';
+}
+
+
 ?>

@@ -42,6 +42,45 @@ if(empty($_SESSION['cart'])){
         $priceType = 'Disc';
     }
     
+    $movieFullDay = '';
+        if($movieDay == 'MON'){
+        $movieFullDay = 'Monday';
+    }else if($movieDay == 'TUE'){
+        $movieFullDay = 'Tuesday';
+    }else if($movieDay == 'WED'){
+        $movieFullDay = 'Wednesday';
+    }else if($movieDay == 'THU'){
+        $movieFullDay = 'Thursday';
+    }else if($movieDay == 'FRI'){
+        $movieFullDay = 'Friday';
+    }else if($movieDay == 'SAT'){
+        $movieFullDay = 'Saturday';
+    }else if($movieDay == 'SUN'){
+        $movieFullDay = 'Sunday';
+    }
+    
+    $movieTime = '';
+        if($movieHour == 'T12'){
+        $movieTime = '12:00pm';
+    }else if($movieHour == 'T15'){
+        $movieTime = '3:00pm';
+    }else if($movieHour == 'T18'){
+        $movieTime = '6:00pm';
+    }else if($movieHour == 'T21'){
+        $movieTime = '9:00pm';
+    }
+    
+    $movieName = '';
+       if($movieID == 'ACT'){
+        $movieName = 'Endgame';
+    }else if($movieID == 'RMC'){
+        $movieName = 'Top End Wedding';
+    }else if($movieID == 'ANM'){
+        $movieName = 'Dumbo';
+    }else if($movieID == 'AHF'){
+        $movieName = 'The Happy Prince';
+    }
+    
     $orderDetails = [$date, $custName, $custEmail, $custMobile, $movieID, $movieDay, $movieHour,
                      $staQTY, $stpQTY, $stcQTY, $fcaQTY, $fcpQTY, $fccQTY, $seatsTotal];
   
@@ -65,7 +104,10 @@ if(empty($_SESSION['cart'])){
     <section id = "customerDetails">
         <div id = "custName" class = "custName"><?= $custName ?>,</div>
         <div id = "summary" class = "summary">
-            This is the receipt for your movie order at Lunardo Cinemas<br><br>
+            This is the receipt for your movie order at Lunardo Cinemas<br>
+            Movie: <?= $movieName ?><br>
+            Day: <?= $movieFullDay ?><br>
+            Time: <?= $movieTime ?><br><br>
             <a href = "tickets.php" target = _blank>Click here to view your tickets</a>
         </div>
         <div id = "receiptDetails">
